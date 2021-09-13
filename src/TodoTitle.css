@@ -1,0 +1,7 @@
+.header__title {
+    font-family: 'Urbanist',
+        sans-serif;
+    color: #34435E;
+    display: flex;
+    justify-content: center;
+}
