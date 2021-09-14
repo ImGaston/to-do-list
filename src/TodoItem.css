@@ -18,6 +18,10 @@
     font-weight: 400;
 }
 
+.TodoItem-p--complete {
+    text-decoration: line-through;
+}
+
 .Icon {
     cursor: pointer;
     display: flex;
