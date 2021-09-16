@@ -4,7 +4,7 @@ import './CreateTodoButton.css';
 function CreateTodoButton() {
     const onClickButon = () => {
         alert('que tarea quieres agregar?')
-    };
+    }
     
     return (
         <button 
