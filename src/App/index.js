@@ -1,13 +1,7 @@
 // * TODO: Agregar un componente para que desaparezcan los ya completados
 // * TODO: cuando marquemos completado o eliminado se cambie el estado
 import React from 'react';
-import { TodoCounter } from './TodoCounter';
-import { TodoItem } from './TodoItem';
-import { TodoSearch } from './TodoSearch';
-import { CreateTodoButton } from './CreateTodoButton';
-import { TodoList } from './TodoList';
-import { TodoTitle } from './TodoTitle';
-// import './App.css';
+import { AppUI } from './AppUI';
 
 const defaultTodos = [
   { text: 'Compras de ferreteria', completed: false },
@@ -34,36 +28,30 @@ function App() {
     });
   };
 
-  const toggleCompleteTodos = (text) => {
+  const toggleCompleteTodo = (text) => {
 	const todoIndex = todos.findIndex(todo => todo.text === text);
 	const newTodos = [...todos];
 	newTodos[todoIndex].completed = !newTodos[todoIndex].completed;
 	setTodos(newTodos);
 }
 
+  const deleteTodo = (text) => {
+	const todoIndex = todos.findIndex(todo => todo.text === text);
+	const newTodos = [...todos];
+	newTodos.splice(todoIndex, 1);
+	setTodos(newTodos);
+}
+
   return (
-    <React.Fragment>
-      <TodoTitle />
-      <TodoCounter 
-        total={totalTodos}
-        completed={completedTodos}
-      />
-      <TodoSearch 
-        searchValue={searchValue}
-        setSearchValue={setSearchValue}
-      />
-      <TodoList>
-        {searchedTodos.map(todo => (
-          <TodoItem 
-            key={todo.text} 
-            text={todo.text} 
-            completed={todo.completed}
-            onComplete={() => toggleCompleteTodos(todo.text)}
-            />
-        ))}
-      </TodoList>
-      <CreateTodoButton />
-    </React.Fragment>    
+    <AppUI 
+      totalTodos={totalTodos}
+      completedTodos={completedTodos}
+      searchValue={searchValue}
+      setSearchValue={setSearchValue}
+      searchedTodos={searchedTodos}
+      toggleCompleteTodo={toggleCompleteTodo}
+      deleteTodo={deleteTodo}
+    />
   );
 }
 
