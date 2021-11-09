@@ -1,5 +1,6 @@
 import React from 'react';
 import { TodoContext } from '../TodoContext';
+import './TodoForm.css';
 
 function TodoForm() {
     const [newTodoValue, setNewTodoValue] = React.useState(''); 
@@ -18,6 +19,8 @@ function TodoForm() {
     
     const  onSubmit = (event) => {
         event.preventDefault();
+        if(newTodoValue.length <= 0)
+            return alert('no  escribiste nada amigo');
         addTodo(newTodoValue)
         setOpenModal(false);
     };
@@ -25,18 +28,19 @@ function TodoForm() {
     return (
         <form
             onSubmit={onSubmit}>
-            <label>
-            </label>
+            <label>Escribe tu nuevo To Do</label>
             <textarea 
                 value={newTodoValue}
                 onChange={onChange}
                 placeholder="Tu tarea para hacer en el día" />
-            <div>
+            <div className='TodoForm-buttonContainer'>
                 <button
                     type='button'
                     onClick={onCancel}
+                    className="TodoForm-button TodoForm-button-cancel"
                 >cancelar</button>
                 <button
+                    className="TodoForm-button TodoForm-button-add"
                     type='submit'
                 >crear</button>
             </div>
