@@ -1,10 +1,16 @@
 import React from 'react';
 import './CreateTodoButton.css';
+import { TodoContext } from '../TodoContext';
 
 function CreateTodoButton() {
+    const {
+    setOpenModal,
+    openModal,
+    } = React.useContext(TodoContext);
     const onClickButon = () => {
-        alert('que tarea quieres agregar?')
-    }
+        setOpenModal(!openModal);
+    };
+    
     
     return (
         <button 
@@ -17,3 +23,4 @@ function CreateTodoButton() {
 }
 
 export { CreateTodoButton };
+
