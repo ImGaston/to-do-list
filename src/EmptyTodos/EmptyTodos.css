@@ -5,5 +5,8 @@
 }
 
 img {
-    width: 50%;
+    /* max-height: 500px; */
+    height: 400px;
+    /* width: 50%; */
+
 }
