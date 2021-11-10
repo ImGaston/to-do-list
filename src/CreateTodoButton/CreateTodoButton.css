@@ -10,12 +10,12 @@
     display: flex;
     font-size: 50px;
     font-weight: bold;
-    height: 64px;
-    max-height: 64px;
+    /* height: 64px;
+    max-height: 64px; */
     justify-content: center;
     position: fixed;
     right: 24px;
-    width: 64px;
+    /* width: 64px; */
     max-width: 64px;
     z-index: 100;
 }
