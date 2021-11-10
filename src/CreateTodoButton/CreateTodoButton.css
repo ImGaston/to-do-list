@@ -1,20 +1,21 @@
 .button {
+    align-items: center;
     background-color: rgb(52, 67, 94);
     box-shadow: 4.1px 8.2px 8.2px hsl(0deg 0% 0% / 0.37);
     border: none;
     border-radius: 50%;
-    cursor: pointer;
-    font-size: 50px;
-    position: fixed;
     bottom: 24px;
-    right: 24px;
-    font-weight: bold;
+    cursor: pointer;
     color: #EFE6E6;
     display: flex;
-    justify-content: center;
-    align-items: center;
+    font-size: 50px;
+    font-weight: bold;
     height: 64px;
+    justify-content: center;
+    position: fixed;
+    right: 24px;
     width: 64px;
+    max-width: 64px;
     z-index: 100;
 }
 
