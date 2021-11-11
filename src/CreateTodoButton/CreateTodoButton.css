@@ -10,16 +10,22 @@
     display: flex;
     font-size: 50px;
     font-weight: bold;
-    /* height: 64px;
-    max-height: 64px; */
+    height: 64px;
+    max-height: 64px;
     justify-content: center;
     position: fixed;
     right: 24px;
-    /* width: 64px; */
+    width: 64px;
     max-width: 64px;
     z-index: 100;
 }
 
 .button:hover {
     box-shadow: 6.0px 12.0px 12.0px hsl(0deg 0% 0% / 0.31);
+}
+
+@media only screen and (max-width: 500) {
+    .button {
+        min-width: 64px;
+    }
 }
