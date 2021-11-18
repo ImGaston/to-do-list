@@ -1,3 +1,7 @@
+input[type=button] {
+    -webkit-appearance: none;
+}
+
 .button {
     align-items: center;
     background-color: rgb(52, 67, 94);
@@ -17,7 +21,7 @@
     right: 24px;
     width: 64px;
     max-width: 64px;
-    z-index: 100;
+    z-index: 1;
 }
 
 .button:hover {
