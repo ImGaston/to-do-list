@@ -12,6 +12,7 @@ import { EmptyTodos } from '../EmptyTodos';
 import { TodoError } from '../TodoError';
 import { TodoLoading } from '../TodoLoading';
 
+
 function AppUI() {
     const { 
         error, 
@@ -29,7 +30,7 @@ function AppUI() {
             <TodoSearch />
             <TodoList>
                 {error && <TodoError error={error} />}
-                {loading && <TodoLoading />}
+                {loading && new Array(3).fill(1).map((a, i) => <TodoLoading key={i} />)}
                 {(!loading && !searchedTodos.length) && <EmptyTodos />}
                 {searchedTodos.map(todo => (
                 <TodoItem 
