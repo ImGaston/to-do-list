@@ -1,6 +1,7 @@
 import React from 'react';
 import './CreateTodoButton.css';
 import { TodoContext } from '../TodoContext';
+import { MdAddTask }from 'react-icons/md'
 
 function CreateTodoButton() {
     const {
@@ -17,7 +18,7 @@ function CreateTodoButton() {
         className='button'
         onClick={onClickButon}
         >
-        +
+        <MdAddTask />
         </button>
     )
 }

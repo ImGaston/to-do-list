@@ -1,5 +1,7 @@
 import React from 'react';
 import './TodoItem.css';
+import { MdTaskAlt }from 'react-icons/md'
+import { MdDeleteOutline }from 'react-icons/md'
 
 function TodoItem(props) {
     
@@ -9,7 +11,7 @@ function TodoItem(props) {
             className={`Icon Icon-check ${props.completed && 'Icon-check--active'}`}
             onClick={props.onComplete}
         >
-            C
+            <MdTaskAlt />
         </span>
         <p className={`TodoItem-p ${props.completed && 'TodoItem-p--complete'}`}>
             {props.text}
@@ -18,7 +20,7 @@ function TodoItem(props) {
             className="Icon Icon-delete"
             onClick={props.onDelete}
         >
-            X
+            <MdDeleteOutline />
         </span>
         </li>
     )
