@@ -9,14 +9,12 @@
     color: #EFE6E6;
     display: flex;
     font-size: 50px;
-    font-weight: bold;
-    height: 64px;
-    max-height: 64px;
+    padding: 15px;
+    height: 75px;
     justify-content: center;
     position: fixed;
     right: 24px;
-    width: 64px;
-    max-width: 64px;
+    width: 75px;
     z-index: 100;
 }
 
@@ -24,8 +22,8 @@
     box-shadow: 6.0px 12.0px 12.0px hsl(0deg 0% 0% / 0.31);
 }
 
-@media only screen and (max-width: 500) {
+/* @media only screen and (max-width: 500) {
     .button {
         min-width: 64px;
     }
-}
+} */
