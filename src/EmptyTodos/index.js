@@ -3,7 +3,7 @@ import './EmptyTodos.css';
 
 function EmptyTodos() {
     return <div className='img-emptytodo'>
-                <img src="https://i.ibb.co/0Y6vrVQ/emptytodos.png" alt="empty to do app"/>
+                <img src="https://i.ibb.co/ypQrtPg/emptytodos.webp" alt="empty to do app"/>
             </div>
 }
 
